@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.addEventListener('keypress', (e) => {
+            let letter = e.key; 
+
+            
+            letter = letter.toLowerCase();
+
+            
+            if ("aeiou".includes(letter)) {
+                console.log("You pressed a vowel: " + letter);
+            }
+            
+            else if (letter >= 'a' && letter <= 'z') {
+                console.log("You pressed a consonant: " + letter);
+            }
+            
+            else if (letter >= '0' && letter <= '9') {
+                console.log("You pressed a number: " + letter);
+            }
+            
+            else {
+                console.log("You pressed a symbol: " + letter);
+            }
+        });
+
+    </script>
+</body>
+
+</html>

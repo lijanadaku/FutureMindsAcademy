@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #b3b3b3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            background-color: #b3b3b3;
+            padding: 20px;
+        }
+
+        input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .input-container {
+            position: relative;
+        }
+
+        .error-message {
+            color: rgb(77, 74, 74);
+            font-size: 14px;
+            margin-top: 5px;
+            display: none;
+            animation-name: forma;
+            animation-duration: 3s;
+            animation-delay: 0s;
+        }
+
+        @keyframes forma {
+            from {
+                transform: translateY(10px);
+            }
+
+            to {
+                transform: translateY(0px);
+            }
+        }
+
+        input:focus+.error-message {
+            display: block;
+        }
+
+
+        .spinner {
+            width: 30px;
+            height: 30px;
+            border: 4px solid blue;
+            border-top: 4px solid transparent;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            position: absolute;
+            right: 525px;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .button-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form>
+        <div class="input-container">
+            <input type="text" id="first-name" placeholder="First Name" required>
+            <p class="error-message">* Enter a valid first name</p>
+        </div>
+        <div class="input-container">
+            <input type="text" id="last-name" placeholder="Last Name" required>
+            <p class="error-message">* Enter a valid last name</p>
+        </div>
+        <div class="input-container">
+            <input type="email" id="email" placeholder="Email" required>
+            <p class="error-message">* Your email should be a Gmail domain</p>
+        </div>
+
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            <div class="spinner"></div>
+        </div>
+
+
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+
+    <nav class="bg-white p-4 border-b">
+        <div class="max-w-4lg mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-600">Logo</a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="#">Sherbimet</a></li>
+                <li><a href="#">Kontakti</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="text-center py-12 bg-blue-50">
+        <h1 class="text-3lg font-bold text-blue-600">Na Kontaktoni</h1>
+        <p class="mt-2 text-gray-600">Plotesoni formularin me poshte dhe ne do t'ju pergjigjemi.</p>
+    </section>
+
+
+    <main class="max-w-3lg mx-auto p-6 bg-white rounded-lg shadow mt-6">
+        <form action="#" method="POST" class="mt-4">
+
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium">Emri</label>
+                <input type="text" id="name" name="name" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium">Email</label>
+                <input type="text" id="email" name="email" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <div class="mb-4">
+                <label for="message" class="block text-gray-700 font-medium">Mesazhi</label>
+                <input type="text" id="message" name="message" required
+                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+
+            <button type="submit"
+                class="w-full bg-blue-500 text-white py-3 rounded-lg shadow hover:bg-blue-600 transition">
+                Dergo Mesazhin
+            </button>
+        </form>
+    </main>
+
+
+    <footer class="text-center py-4 text-gray-600 mt-8">
+        &copy; Te gjitha te drejtat e rezervuara.
+    </footer>
+
+</body>
+</html>

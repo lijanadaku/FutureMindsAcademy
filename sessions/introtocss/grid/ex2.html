@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: lightblue;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-areas: 
+            "header header"
+            "aside main"
+            "footer footer";
+            gap: 10px;
+        }
+        .header{
+            grid-area: header;
+            text-align: center;
+            background-color: orange;
+        }
+        .aside{
+            grid-area: aside;
+            background-color: gray;
+        }
+        .main{
+            grid-area: main;
+            background-color: green;
+        }
+        .footer{
+            grid-area: footer;
+            text-align: center;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Titulli</h1>
+        </div>
+        <div class="aside">
+            <img src="https://static.nike.com/a/images/t_PDP_936_v1/f_auto,q_auto:eco/b1bcbca4-e853-4df7-b329-5be3c61ee057/NIKE+DUNK+LOW+RETRO.png" alt="" width="200" height="200">
+        </div>
+        <div class="main">
+            <p>paragrafi 1</p>
+            <p>paragrafi 2</p>
+        </div>
+        <div class="footer">
+            <p>footer</p>
+        </div>
+    </div>
+</body>
+</html>

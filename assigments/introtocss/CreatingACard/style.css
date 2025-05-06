@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+}
+
+.card {
+    width: 250px;
+    border: 3px solid black;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 3px solid black;
+    font-family: Arial, sans-serif;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-right: 2px solid black;
+    padding-right: 50px;
+
+}
+
+.date {
+    text-align: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    
+}
+
+.big-text {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.small-text {
+    font-size: 12px;
+    display: block;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.code {
+    font-size: 10px;
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-section {
+    
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin: 0;
+    position: relative;
+}
+
+.copyright {
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    text-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottom-section img {
+    width: 100%;
+    padding-bottom: 0px;
+}

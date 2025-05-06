@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+}
+
+aside{
+    flex: 1;
+    height: 100vh;
+    padding: 20px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+aside ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 0px;
+
+}
+
+aside ul li{
+    background-color: aliceblue;
+    padding: 5px;
+}
+
+aside ul li:hover{
+    background-color: rgb(253, 0, 0);
+    color: white;
+}
+
+main{
+    flex: 8;
+    background-color: gainsboro;
+}
+
+
+
+
+main div{
+
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.a{
+    flex: 2;
+    display: flex;
+    background-color: grey;
+    justify-content: space-evenly;
+    gap: 20px;
+
+}
+
+.b{
+    flex: 3;
+    display: flex;
+    background-color: yellow;
+   justify-content: space-evenly;
+   gap: 20px;
+}

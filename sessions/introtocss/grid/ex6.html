@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            height: 100vh;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 
+            "header header"
+            "aside main"
+            "footer footer"
+            ;
+        }
+        .header{grid-area: header; background-color: red;}
+        .aside{grid-area: aside; background-color: green;}
+        .main{grid-area: main; background-color: blue;}
+        .footer{grid-area: footer; background-color: orange;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Titulli i pare</h1>
+            <p>Paragrafi i dyte</p>
+        </div>
+        <div class="aside">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg" alt="" width="50">
+        </div>
+        <div class="main">
+            <h3>Titulli i dyte</h3>
+            <p>Paragrafi i pare</p>
+        </div>
+        <div class="footer">
+            <p>Footer</p>
+        </div>
+    </div>
+</body>
+</html>

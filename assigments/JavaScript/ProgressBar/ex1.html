@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vertical Progress Bar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .progress-bar-container {
+            height: 300px;
+            width: 40px;
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        .indicator {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: grey;
+        }
+
+        .progress-bar-wrapper {
+            flex-grow: 1;
+            width: 100%;
+            position: relative;
+            background-color: white;
+        }
+
+        .progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 0%;
+            background-color: green;
+        }
+
+        .progress-bar:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #333;
+            color: white;
+            padding: 2px 6px;
+            font-size: 0.75rem;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar-container">
+        <span class="indicator">100%</span>
+        <div class="progress-bar-wrapper">
+            <div id="bar" class="progress-bar" data-tooltip=""></div>
+        </div>
+        <span class="indicator">0%</span>
+    </div>
+
+    <script>
+        let percentage = parseInt(prompt('What is the progress?'));
+
+        if (isNaN(percentage) || percentage < 0 || percentage > 100)
+            throw new Error('Write a valid percentage!');
+
+        let color;
+        if (percentage <= 20)
+            color = 'darkred';
+        else if (percentage <= 50)
+            color = 'orange';
+        else if (percentage <= 80)
+            color = 'yellow';
+        else
+            color = 'green';
+
+        let progressBar = document.getElementById('bar');
+        progressBar.style.backgroundColor = color;
+        progressBar.style.height = `${percentage}%`;
+        progressBar.setAttribute('data-tooltip', `${percentage}%`);
+    </script>
+</body>
+</html>

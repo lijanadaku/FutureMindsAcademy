@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr) ;
+            grid-template-rows: repeat(1,1fr);
+            grid-template-areas: 
+            " sidebar contente contente contente"
+            " sidebar contente contente contente"
+            " sidebar contente contente contente"
+            " sidebar contente contente contente"
+            ;
+            height: 100vh;
+        }
+        .sidebar{
+            grid-area: sidebar;
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .contente{
+            grid-area: contente;
+            
+            
+        }
+        .sidebar h1 {
+           font-size: 30px;
+           margin-bottom: 10px;
+
+        }
+
+        .sidebar p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .login-btn {
+            background-color: white;
+            color: #2c3e50;
+            padding: 10px 20px;
+            border: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .pinned-post, .recent-post {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+    
+        }
+
+
+        .post-category {
+           font-size: 12px;
+           color: #888;
+           text-transform: uppercase;
+           margin-bottom: 5px;
+           border-bottom: 2px solid #ddd;
+        }
+
+
+        .author {
+           font-size: 14px;
+           color: #555;
+        }
+
+        .author a {
+           color: #3498db;
+           text-decoration: none;
+        }
+
+
+        .tag {
+           font-size: 12px;
+           padding: 3px 6px;
+           border-radius: 4px;
+           color: white;
+           font-weight: bold;
+        }
+
+        .css {
+           background-color: #27ae60;
+        }
+
+        .html {
+          background-color: #2980b9;
+        }
+
+        .javascript {
+          background-color: #c0392b;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="sidebar">
+            <h1>A  <br>SAMPLE   <br>BLOG</h1> <br>
+            <p>Lorem Ipsum  <br>dolor</p>
+            <button class="login-btn">LOG IN</button>
+        </div>
+
+        <div class="contente">
+            <div class="pinned-post">
+                <p class="post-category">PINNED POST</p>
+                <h2>A pinned post</h2>
+                <p class="author">By <a href="#">John Doe</a> under 
+                    <span class="tag css">CSS</span> 
+                    <span class="tag html">HTML</span>
+                </p> <br> <br>
+                <p class="post-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dolores exercitationem minima vitae sed rem in eaque voluptates architecto iusto corporis sequi error dolorum reprehenderit, tempore eveniet officia, voluptatibus est. Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda nisi harum, modi impedit quisquam inventore, iure ipsam, nihil neque sapiente at ea natus magni quidem qui? Porro consequatur excepturi quod!
+                </p>
+            </div>
+
+            <div class="recent-post">
+                <p class="post-category">RECENT POSTS</p>
+                <h2>A recent post</h2>
+                <p class="author">By <a href="#">Rocky Balboa</a> under 
+                    <span class="tag javascript">JavaScript</span>
+                </p> <br> <br>
+                <p class="post-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident rem est reprehenderit iste ipsam eius? Alias officiis provident quae expedita debitis, at odit praesentium iste veritatis similique tenetur unde cum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, magni accusamus dolor, fuga pariatur molestiae nemo architecto neque totam incidunt repellendus deleniti sit vitae aliquid laudantium ut provident, debitis veniam?
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

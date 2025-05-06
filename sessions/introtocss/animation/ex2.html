@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: shembull1;
+            animation-duration: 4s;
+            position: relative;
+            animation-iteration-count: 2;
+            animation-direction: normal;
+            /*normal,alternate,alternate-reverse,reverse*/
+            animation-fill-mode: forwards;
+            /*backwards,forwards*/
+        }
+        @keyframes shembull1{
+            0%{background-color: red;top: 0px;left: 0px;}
+            25%{background-color: green;top: 0px;left: 200px;}
+            50%{background-color: yellow;top: 200px;left: 200px;}
+            75%{background-color: orange;top: 200px;left: 0px;}
+            100%{background-color: blue;top: 0px;left: 0px;}
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

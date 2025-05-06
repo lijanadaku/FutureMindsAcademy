@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold p-4 m-4 rounded">
+        Kliko
+    </button>
+    <!--bg(background color), hover:(kalimi me maus), text-white(rregullimi i ngjyres),
+    font-bold(stili i shkronjave), p dhe m(padding dhe margin), rounded(redius)-->
+
+    <div class="my-3 max-w-sm rounded overflow-hidden shadow-lg p-4 bg-white">
+        <img class="w-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUPIfiGgUML8G3ZqsNLHfaCnZK3I5g4tJabQ&s" alt="">
+    </div>
+    <!-- my(rregullimi i margin ne pjesen vertikale), max-w-sm(rregullimi i gjersise max(sm,mf,lg)),
+     overflow-hidden(mos me dal elementet jasht korrnizes), shadow(rregullimi i hijes)-->
+
+    <nav class="bg-gray-500 my-4 p-4">
+        <div class="container mx-auto rounded flex justify-between item-center text-white">
+            <h1>Logo</h1>
+            <ul class="flex space-x-4">
+                <li>Linku 1</li>
+                <li>Linku 2</li>
+            </ul>
+        </div>
+    </nav>
+    <!-- container mx-auto(pozicionim i elementit ne qender), 
+     flex(caktimi i ndryshimit te pozicionimeve te elementeve),
+     justify-between(rregullimi horizontal), item-center(rregullimi vertikal),
+     flex space-x-4(rregullimi i hapsires horizontale)-->
+
+     <div class="grid grid-cols-3 gap-4 p-4 my-4">
+        <div class="bg-blue-500 rounded text-white p-4">Elementi i pare</div>
+        <div class="bg-green-500 rounded text-white p-4">Elementi i dyte</div>
+     </div>
+     <!-- grid(rregullimi i pozicionimit te elementeve permes grid),
+      grid-cols-3(rregullimi i kolonave), gap(rregullimi i hapsirave)-->
+</body>
+</html>

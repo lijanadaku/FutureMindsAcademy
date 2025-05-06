@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            animation-name: shembull;/*emertimin e animcioneve per ate element*/
+            animation-duration: 4s;/*kohezgjatja e animacioneve*/
+            animation-delay: 1s;/*caktimi i nje vonese*/
+            animation-iteration-count: 2;/*perseritja e animacioneve*/
+            /*infinite, dhe permes nr (2,3,4,...)*/
+        }
+        @keyframes shembull{
+            from{ transform: translateY(0px);}
+            to{ transform: translateY(40px);}
+        }
+    </style>
+</head>
+<body>
+    <p>Paragrafi i pare</p>
+</body>
+</html>

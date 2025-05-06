@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition-delay: 1s;/*mundeson nje vonese para 
+            fillimit te efektit*/
+            transition-duration: 4s;/*tregon kohen sa zgjate
+            tranzicioni*/
+            transition-property: transform;/*specifkon
+            se me cilen veqori te filloje tranzicioni*/
+
+        }
+        div:hover{
+            width: 300px;
+            background-color: yellow;
+            transform: rotate(720deg);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
