@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let circle = {
+            radius: 2,
+            getRadius: function(){
+                return this.radius;
+            },
+            setRadius: function(radius){
+                return this.radius = radius;
+            },
+            getArea: function(){
+               return this.radius**2 * Math.PI; /*me dy ylla(**) i bjen ne katror*/
+            },                                  /* kur jon 3= psh === a jo te barabarta dhe a i kane tipet e barabarta*/
+            getPerimeter: function(){
+               return 2 * Math.PI * this.radius;
+            }
+            
+        }
+        console.log(circle.getPerimeter);
+
+
+    </script>
+</body>
+</html>

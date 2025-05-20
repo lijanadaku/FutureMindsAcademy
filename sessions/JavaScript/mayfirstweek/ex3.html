@@ -1,11 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <script>
+        let score = 0
+
+        function nenNje() {
+            let name = prompt("Cili eshte kryeqyteti i Shqiperise?\n 1.Prishtina\n 2.Tirana\n 3.Durresi");
+
+            if (name == "2") {
+
+                let score = 10;
+            }
+            else {
+
+                let score = 0;
+            }
+        }
+
+        function nenDy() {
+            let name1 = prompt("Cili eshte kryeqyteti i Kosoves?\n 1.Prishtina\n 2.Tirana\n 3.Durresi");
+            if (name == "1") {
+
+                let score = 10;
+            }
+            else {
+
+                let score = 0;
+            }
+        }
+
+        function nenTre() {
+            let name2 = prompt("Cili nga keta qytete ka port? 1.Prishtina 2.Tirana 3.Durresi");
+            if (name == "3") {
+
+                let score = 10;
+            }
+            else {
+
+                let score = 0;
+            }
+        }
+
+
+        for(let i = 1; i<=3; i++){
+            if(i===1)nenNje();
+            else if(i === 2) nenDy();
+            else if (i === 2) nenTre();
+
+        }
+
+        function shfaqRezultatin(){
+            if (score >=20){
+                alert("Urime e keni kaluar testin me" +score+"pike");
+            }
+            else {
+                alert("Me vjen keq ti ke vetem" +score+ "pike.Provo perseri");
+            }
+        }
+        shfaqRezultatin();
+
+    </script>
 </body>
+
 </html>

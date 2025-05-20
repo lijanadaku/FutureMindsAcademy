@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        #room {
+            background-color: lightblue;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>My Room</h2>
+    <div id="room"></div>
+    <p id="info"></p>
+
+    <script>
+        
+        let width = parseFloat(prompt("Enter room width (meters):"));
+        let length = parseFloat(prompt("Enter room length (meters):"));
+
+       
+        if (length > width) {
+            let temp = width;
+            width = length;
+            length = temp;
+        }
+
+        
+        let area = width * length;
+        let perimeter = 2 * (width + length);
+
+     
+        let scale = 300 / width;
+        let displayWidth = width * scale;
+        let displayHeight = length * scale;
+
+        
+        let room = document.getElementById("room");
+        room.style.width = displayWidth + "px";
+        room.style.height = displayHeight + "px";
+
+        
+        document.getElementById("info").innerHTML =
+            `Width: ${width}m<br>Length: ${length}m<br>Area: ${area} m²<br>Perimeter: ${perimeter} m`;
+    </script>
+
+</body>
+
+</html>

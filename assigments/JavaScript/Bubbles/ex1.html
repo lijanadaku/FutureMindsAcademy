@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: white;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: moveUpDown 4s infinite ease-in-out;
+        }
+
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+        let numberOfCircles = 300;
+
+        for (let i = 0; i < numberOfCircles; i++) {
+            let circle = document.createElement("div"); 
+            circle.className = "bubble"; 
+
+            
+            let size = Math.floor(Math.random() * 30) + 10; 
+            circle.style.width = size + "px";
+            circle.style.height = size + "px";
+
+            
+            let left = Math.floor(Math.random() * window.innerWidth);
+            let top = Math.floor(Math.random() * window.innerHeight);
+            circle.style.left = left + "px";
+            circle.style.top = top + "px";
+
+            
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            circle.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+
+            
+            document.body.appendChild(circle);
+        }
+    </script>
+</body>
+
+</html>

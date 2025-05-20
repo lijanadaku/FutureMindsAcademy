@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let x = parseInt(prompt("Enter how many Fibonacci numbers to show:"));
+
+        if (isNaN(x) || x <= 0) {
+            console.log("Please enter a positive number.");
+        } else {
+            let a = 1;
+            let b = 1;
+
+            console.log(a); 
+
+            if (x > 1) {
+                console.log(b); 
+            }
+
+            for (let i = 3; i <= x; i++) {
+                let next = a + b;
+                console.log(next);
+                a = b;
+                b = next;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

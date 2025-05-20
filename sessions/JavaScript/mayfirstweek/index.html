@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        
+        let defaultTitle = document.title;
+        let defaultFavicon = null;
+        let intervalId = null;
+
+        
+        let toggle = false;
+
+        
+        function getFavicon() {
+            return document.querySelector("link[rel~='icon']");
+        }
+
+        
+        function setFavicon(href) {
+            let link = getFavicon();
+
+            if (!link) {
+                link = document.createElement("link");
+                link.rel = "icon";
+                document.head.appendChild(link);
+            }
+
+            link.href = href;
+        }
+
+        
+        function startNotification(text) {
+            endNotification(); 
+
+            defaultTitle = document.title;
+
+            const faviconLink = getFavicon();
+            defaultFavicon = faviconLink ? faviconLink.href : null;
+
+            const bellIcon = "https://upload.wikimedia.org/wikipedia/commons/e/e7/Bell_icon.svg";
+
+            intervalId = setInterval(() => {
+                toggle = !toggle;
+
+                if (toggle) {
+                    document.title = text;
+                    setFavicon(bellIcon);
+                } else {
+                    document.title = defaultTitle;
+                    setFavicon(defaultFavicon);
+                }
+            }, 1000);
+        }
+
+       
+        function endNotification() {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+
+            document.title = defaultTitle;
+
+            if (defaultFavicon) {
+                setFavicon(defaultFavicon);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

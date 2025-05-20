@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+            background-color: white;
+            padding: 8px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <h1 id="date"></h1>
+    
+    <ul id="taskList"></ul>
+
+    <script>
+
+        const today = new Date();
+        const dateElement = document.getElementById("date");
+        dateElement.textContent = "Tasks for " + today.toDateString();
+
+        
+        const taskList = document.getElementById("taskList");
+
+    
+        while (true) {
+            let task = prompt("Enter a task for today (leave empty to finish):");
+
+            if (task === null || task.trim() === "") {
+                
+                break;
+            }
+
+            
+            let listItem = document.createElement("li");
+            listItem.textContent = task;
+            taskList.appendChild(listItem);
+        }
+    </script>
+
+
+
+</body>
+
+</html>
